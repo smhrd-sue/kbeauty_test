@@ -34,7 +34,7 @@ public class ProductService {
         
         List<String> images = detailRepository.findAllByProductIdOrderBySortOrderAsc(id)
         							.stream()
-        							.map(d -> d.getDetailImages())
+        							.map(d -> d.getImageUrl())
         							.collect(java.util.stream.Collectors.toList());
                 
         return new DTO(product, images);

@@ -17,7 +17,7 @@ public class ProductDetail {
 	@Id
     private Long detailId;
     private Long productId;
-    private String detailImages;
+    private String imageUrl;
     private Integer sortOrder;
 
 }
