@@ -23,6 +23,7 @@ public class ProductApiController {
 
     @GetMapping("/all")
     public List<Product> getAllList() {
+    	System.out.println("all 요청 ++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         // [REQ-04] Read-Replica 환경에서 이 API가 호출되도록 구성하면 성능이 최적화됩니다.
     	System.out.println(productService.getAllProducts().toString());
         return productService.getAllProducts();
@@ -31,6 +32,7 @@ public class ProductApiController {
  // 상세페이지용 API
     @GetMapping("/{id}")
     public DTO getProductDetail(@PathVariable Long id) {
+    	System.out.println("detail 요청 ++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     	System.out.println(productService.getProductDetail(id).toString());
         return productService.getProductDetail(id);
     }
